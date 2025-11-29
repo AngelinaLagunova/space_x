@@ -43,7 +43,10 @@ function App() {
 
   return (
     <>
-    <nav className="menu">{navGeneration}</nav>
+    <div className='header'>
+      <img src="logo.png"/>
+      <nav className="menu">{navGeneration}</nav>
+    </div>
     <hr/>
     <div className='main'>
       <div className="button-container">

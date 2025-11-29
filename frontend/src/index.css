@@ -10,14 +10,23 @@ html, body {
 
 body {
   height: 100vh;
-  background-image: url('/public/bg2.png');
+  background-image: url('/public/bg4.png');
   background-size: cover;
   background-position: center;
   /* background-repeat: no-repeat; */
   font-family:Arial
 }
 
+.header{
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
 
+.header img{
+  margin-left:11vw;
+  width:350px;
+
+}
 
 .menu {
   display: flex;
@@ -48,12 +57,14 @@ hr {
   border: none;
   height: 0.5px;
   background: rgb(255, 255, 255, 0.2);
+  margin:0px;
 }
 
 .advantagesBlock{
   display: grid;
   margin-left: 30%;
   margin-top: 10%;
+  width: 540px;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -167,8 +178,8 @@ hr {
 
 
 .button-container{
-  margin-top:15%;
-  margin-left:5%;
+  margin-top:17%;
+  margin-left:11vw;
 }
 
 .button {
@@ -211,15 +222,19 @@ hr {
 }
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .main{
     grid-template-columns: 1fr;
   }
   
 }
-@media (max-width: 1920px) {
+@media (max-width: 1600px) {
   .button-container{
-    margin-left:22%;
+    margin-left:2.5vw;
+  }
+  .header img{
+    margin-left:2.5vw;
+    width:350px;
   }
   
-} */
+}
