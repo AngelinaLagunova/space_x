@@ -51,7 +51,7 @@ function App() {
           <defs>
             <mask id="cutMask">
               <rect width="100%" height="100%" fill="white"/>
-              <circle cx="93%" cy="93%" r="71" fill="black" />
+              <circle cx="168%" cy="400%" r="580" fill="black" />
             </mask>
             <linearGradient id="grad" x1="100%" y1="0%" x2="0%" y2="0%">
               <stop offset="0%" stop-color="rgba(255, 66, 8, 1)" />
