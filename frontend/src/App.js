@@ -46,11 +46,31 @@ function App() {
     <nav className="menu">{navGeneration}</nav>
     <hr/>
     <div className='main'>
-      <div className="button"><a href="/#"><img src="button.png" alt="button"/></a></div>
-      {/* <div class="image-button">
-          <img src="button.png" alt="Кнопка"/>
-          <a href="/#" class="overlay-text">Начать путешествие</a>
-      </div> */}
+      <div className="button-container">
+        <svg width="600" height="80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <mask id="cutMask">
+              <rect width="100%" height="100%" fill="white"/>
+              <circle cx="93%" cy="93%" r="71" fill="black" />
+            </mask>
+            <linearGradient id="grad" x1="100%" y1="0%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="rgba(255, 66, 8, 1)" />
+              <stop offset="100%" stop-color="white" />
+            </linearGradient>
+          </defs>
+          
+          <text x="0" y="70" font-size="4.3em" font-family="Arial" fill="url(#grad)" font-weight="bold" mask="url(#cutMask)">
+            ПУТЕШЕСТВИЕ
+          </text>
+        </svg>
+        <div className='text'>
+          на красную планету
+        </div>
+        <div class="button">
+            <img src="button2.png" alt="Кнопка"/>
+            <a href="/#" class="overlay-text">Начать путешествие</a>
+        </div>
+      </div>
       <div className="advantagesBlock">{advantagesGeneration}</div>
     </div>
     </>

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'RemoraCorp';
+  src: url('./RemoraCorp-W1Medium.otf') format('opentype');
+}
 
 html, body {
   height: 100%;
@@ -6,7 +10,7 @@ html, body {
 
 body {
   height: 100vh;
-  background-image: url('/public/bg3.png');
+  background-image: url('/public/bg2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,14 +52,13 @@ hr {
 
 .advantagesBlock{
   display: grid;
-  width: 50%;
   margin-left: 30%;
   margin-top: 10%;
   grid-template-columns: 1fr 1fr;
 }
 
 .advantagesItem0, .advantagesItem1, .advantagesItem2, .advantagesItem3{
-  font-family: 'News Gothic';
+  font-family: 'RemoraCorp', sans-serif;
   text-align: center;
   width: 250px;
   height: 200px;
@@ -106,7 +109,6 @@ hr {
   border-right: solid 2px;
   border-bottom: solid 2px;
   border-image: linear-gradient(to top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
-
 }
 
 .advantagesItem1:hover{
@@ -119,7 +121,6 @@ hr {
   border-left: solid 2px;
   border-bottom: solid 2px;
   border-image: linear-gradient(to top right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
-
 }
 
 .advantagesItem2:hover{
@@ -132,7 +133,6 @@ hr {
   border-right: solid 2px;
   border-top: solid 2px;
   border-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
-
 }
 
 .advantagesItem3:hover{
@@ -145,7 +145,6 @@ hr {
   border-left: solid 2px;
   border-top: solid 2px;
   border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
-
 }
 
 .advantagesText{
@@ -160,13 +159,52 @@ hr {
   font-weight:bold;
 }
 
-.button {
-  margin-top: 40%;
-  margin-left: 5%;
-}
-
 
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.button-container{
+  margin-top:15%;
+  margin-left:5%;
+}
+
+.button {
+  margin-top:15%;
+  /* margin-right: 40%; */
+  width: 226.25px;
+  height: 43.75px;
+  position: relative;
+  display: inline-block;
+}
+
+.button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  color: #fff;
+  width: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  z-index: 10;
+}
+
+.text {
+  font-size:1.5em;
+  background: linear-gradient(to left, rgba(255, 66, 8, 1), white); /* градиент справа налево */
+  
+  -webkit-background-clip: text; /* для Chrome, Safari */
+  -webkit-text-fill-color: transparent; /* делаем текст прозрачным, чтобы показывать фон */
+
+  /* Для Firefox: */
+  background-clip: text;
+  color: transparent;
 }
