@@ -1,0 +1,172 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url('/public/bg3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family:Arial
+}
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 4vw;
+  color: #fff;
+  top: 0;
+  width: 50vw;
+  margin-left: auto;
+
+
+}
+
+.menu a {
+  color: #fff;
+  padding: 1vh 0;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: gray;
+  border: none;
+  border-bottom: 1px solid gray; 
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.advantagesBlock{
+  display: grid;
+  width: 50%;
+  margin-left: 30%;
+  margin-top: 10%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.advantagesItem0, .advantagesItem1, .advantagesItem2, .advantagesItem3{
+  font-family: 'News Gothic';
+  text-align: center;
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  color:#fff;
+}
+
+
+.advantagesItem0 {
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+.advantagesItem1 {
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+.advantagesItem2 {
+  background: linear-gradient(
+    to bottom left,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+.advantagesItem3 {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+.advantagesItem0:hover{
+  background: linear-gradient(
+      to top left,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border: none;
+  border-right: solid 2px;
+  border-bottom: solid 2px;
+  border-image: linear-gradient(to top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
+
+}
+
+.advantagesItem1:hover{
+  background: linear-gradient(
+      to top right,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border: none;
+  border-left: solid 2px;
+  border-bottom: solid 2px;
+  border-image: linear-gradient(to top right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
+
+}
+
+.advantagesItem2:hover{
+  background: linear-gradient(
+      to bottom left,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border: none;
+  border-right: solid 2px;
+  border-top: solid 2px;
+  border-image: linear-gradient(to bottom left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
+
+}
+
+.advantagesItem3:hover{
+  background: linear-gradient(
+      to bottom right,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border: none;
+  border-left: solid 2px;
+  border-top: solid 2px;
+  border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 50%) 1;
+
+}
+
+.advantagesText{
+  color: rgb(255, 255, 255, 0.7);
+  margin: 20px;
+  font-size: 20px;
+}
+
+.advantagesValue{
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 70px;
+  font-weight:bold;
+}
+
+.button {
+  margin-top: 40%;
+  margin-left: 5%;
+}
+
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
