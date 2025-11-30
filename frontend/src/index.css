@@ -3,29 +3,32 @@
   src: url('./RemoraCorp-W1Medium.otf') format('opentype');
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
+/* html, body{
+  height:100%;
+  width:100%;
+} */
 body {
-  height: 100vh;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
   background-image: url('/public/bg4.png');
   background-size: cover;
   background-position: center;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   font-family:Arial
 }
 
+
 .header{
   display: grid;
-  grid-template-columns: 1fr 7fr;
+  width: 95%;
+  margin:auto;
+  grid-template-columns: 1fr 3fr;
 }
 
 .header img{
-  margin-left:11vw;
-  width:350px;
-
+  width: 100%;
 }
 
 .menu {
@@ -37,8 +40,32 @@ body {
   top: 0;
   width: 50vw;
   margin-left: auto;
+}
+
+.menu-toggle {
+  display: none;
+  margin-left: auto;
+  margin-right: 1vh;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color:#fff;
+}
 
 
+.main {
+  display:grid;
+  width: 90%;
+  margin:auto;
+  grid-template-columns: 1fr 1fr;
+  margin: 0vw 1.5vw;
+}
+
+.button-container{
+  width:90%;
+  margin-left: 2.5%;
+  margin-top:15%;
 }
 
 .menu a {
@@ -62,18 +89,22 @@ hr {
 
 .advantagesBlock{
   display: grid;
-  margin-left: 30%;
+  margin-left: 40%;
   margin-top: 10%;
-  width: 540px;
+  width: 60%;
   grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1vw;
+  grid-column-gap: 1vw;
+
+
 }
 
 .advantagesItem0, .advantagesItem1, .advantagesItem2, .advantagesItem3{
   font-family: 'RemoraCorp', sans-serif;
   text-align: center;
-  width: 250px;
-  height: 200px;
-  margin: 10px;
+  width: 100%;
+  height: 100%;
+  /* margin: 5%; */
   color:#fff;
 }
 
@@ -159,28 +190,19 @@ hr {
 }
 
 .advantagesText{
-  color: rgb(255, 255, 255, 0.7);
-  margin: 20px;
-  font-size: 20px;
+  color: rgb(255, 255, 255, 0.4);
+  margin: 5%;
+  font-size: 100%;
 }
 
 .advantagesValue{
   color: rgb(255, 255, 255, 0.8);
-  font-size: 70px;
+  font-size: 300%;
   font-weight:bold;
 }
 
 
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
-
-.button-container{
-  margin-top:17%;
-  margin-left:11vw;
-}
 
 .button {
   margin-top:15%;
@@ -209,32 +231,77 @@ hr {
   z-index: 10;
 }
 
-.text {
-  font-size:1.5em;
-  background: linear-gradient(to left, rgba(255, 66, 8, 1), white); /* градиент справа налево */
-  
-  -webkit-background-clip: text; /* для Chrome, Safari */
-  -webkit-text-fill-color: transparent; /* делаем текст прозрачным, чтобы показывать фон */
+.overlay-text:hover {
+  color: rgb(255, 255, 255, 0.5);
+}
 
-  /* Для Firefox: */
+.text {
+  font-size:2vw;
+  background: linear-gradient(to left, rgba(255, 66, 8, 1), white);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   background-clip: text;
   color: transparent;
 }
 
 
-@media (max-width: 768px) {
+@media(max-width: 1000px) {
+  body{
+    background-image: url('/public/bg_mobile3.png');
+    padding-bottom: 0;
+    padding-left: 0;
+
+  }
+  .menu {
+    flex-direction: column;
+    margin-left: 50%;
+    width: 50%;
+    align-items: stretch;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5); 
+  }
+  .menu.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    z-index: 101;
+  }
   .main{
     grid-template-columns: 1fr;
   }
-  
-}
-@media (max-width: 1600px) {
   .button-container{
-    margin-left:2.5vw;
+    margin-left:5vw;
   }
   .header img{
     margin-left:2.5vw;
-    width:350px;
+    width: 50vw;
   }
-  
+  .advantagesBlock{
+    margin-top: 10%;
+    margin-left: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .text {
+    font-size:5vw;
+  }
+
+  .svg{
+    font-size:10vw;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* убирает горизонтальную прокрутку */
+    overflow-y: auto; /* вертикальную — обычно оставить по умолчанию, или можно совсем скрыть, если нужно */
+    height: 100%;
+  }
+/* 
+  .header{
+    grid-template-columns: 3fr 1fr;
+  } */
 }

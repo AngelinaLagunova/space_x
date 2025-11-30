@@ -9,6 +9,11 @@ function App() {
   const [nav, setNav] = useState([]);
   const [advantages, setAdvantages] = useState([]);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
 
   useEffect(() => {
     fetch(API_URL + "api/menu/")
@@ -44,8 +49,9 @@ function App() {
   return (
     <>
     <div className='header'>
-      <img src="logo.png"/>
-      <nav className="menu">{navGeneration}</nav>
+      <img src="logo.png" alt="logo"/>
+      <button className="menu-toggle" onClick={toggleMenu}>☰</button>
+      <nav className={`menu ${isOpen ? 'open' : ''}`}>{navGeneration}</nav>
     </div>
     <hr/>
     <div className='main'>
@@ -57,21 +63,21 @@ function App() {
               <circle cx="168%" cy="400%" r="580" fill="black" />
             </mask>
             <linearGradient id="grad" x1="100%" y1="0%" x2="0%" y2="0%">
-              <stop offset="0%" stop-color="rgba(255, 66, 8, 1)" />
-              <stop offset="100%" stop-color="white" />
+              <stop offset="0%" stopColor="rgba(255, 66, 8, 1)" />
+              <stop offset="100%" stopColor="white" />
             </linearGradient>
           </defs>
           
-          <text x="0" y="70" font-size="4.3em" font-family="Arial" fill="url(#grad)" font-weight="bold" mask="url(#cutMask)">
+          <text x="-6" y="70" className="svg" fontSize="4.7vw" fontFamily="Arial" fill="url(#grad)" fontWeight="bold" mask="url(#cutMask)">
             ПУТЕШЕСТВИЕ
           </text>
         </svg>
         <div className='text'>
           на красную планету
         </div>
-        <div class="button">
+        <div className="button">
             <img src="button2.png" alt="Кнопка"/>
-            <a href="/#" class="overlay-text">Начать путешествие</a>
+            <a href="/#" className="overlay-text">Начать путешествие</a>
         </div>
       </div>
       <div className="advantagesBlock">{advantagesGeneration}</div>
