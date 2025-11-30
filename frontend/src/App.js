@@ -56,23 +56,8 @@ function App() {
     <hr/>
     <div className='main'>
       <div className="button-container">
-        <svg width="600" height="80" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <mask id="cutMask">
-              <rect width="100%" height="100%" fill="white"/>
-              <circle cx="168%" cy="400%" r="580" fill="black" />
-            </mask>
-            <linearGradient id="grad" x1="100%" y1="0%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="rgba(255, 66, 8, 1)" />
-              <stop offset="100%" stopColor="white" />
-            </linearGradient>
-          </defs>
-          
-          <text x="-6" y="70" className="svg" fontSize="4.7vw" fontFamily="Arial" fill="url(#grad)" fontWeight="bold" mask="url(#cutMask)">
-            ПУТЕШЕСТВИЕ
-          </text>
-        </svg>
         <div className='text'>
+          <span className='big_text'>ПУТЕШЕСТВИЕ</span><br/>
           на красную планету
         </div>
         <div className="button">

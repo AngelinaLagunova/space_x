@@ -3,10 +3,14 @@
   src: url('./RemoraCorp-W1Medium.otf') format('opentype');
 }
 
-/* html, body{
-  height:100%;
-  width:100%;
-} */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+  }
+
 body {
   width: 100%;
   height: 0;
@@ -18,7 +22,6 @@ body {
   background-repeat: no-repeat;
   font-family:Arial
 }
-
 
 .header{
   display: grid;
@@ -52,7 +55,6 @@ body {
   cursor: pointer;
   color:#fff;
 }
-
 
 .main {
   display:grid;
@@ -201,9 +203,6 @@ hr {
   font-weight:bold;
 }
 
-
-
-
 .button {
   margin-top:15%;
   /* margin-right: 40%; */
@@ -246,6 +245,10 @@ hr {
   color: transparent;
 }
 
+.big_text{
+  font-weight: bold;
+  font-size: 4.7vw;
+}
 
 @media(max-width: 1000px) {
   body{
@@ -275,6 +278,7 @@ hr {
     grid-template-columns: 1fr;
   }
   .button-container{
+    margin-top:20%;
     margin-left:5vw;
   }
   .header img{
@@ -282,26 +286,26 @@ hr {
     width: 50vw;
   }
   .advantagesBlock{
-    margin-top: 10%;
-    margin-left: 0;
+    margin-top: 30%;
+    margin-left: 2.5vw;
+    width: 90%;
+    margin-left: 2.5vw;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 10%;
   }
   .text {
     font-size:5vw;
+    margin-bottom:10%;
   }
-
-  .svg{
-    font-size:10vw;
+  .big_text{
+    font-size: 10vw;
   }
   html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* убирает горизонтальную прокрутку */
-    overflow-y: auto; /* вертикальную — обычно оставить по умолчанию, или можно совсем скрыть, если нужно */
+    overflow-x: hidden;
+    overflow-y: auto;
     height: 100%;
   }
-/* 
-  .header{
-    grid-template-columns: 3fr 1fr;
-  } */
+
 }
