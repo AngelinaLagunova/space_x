@@ -57,7 +57,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://176.113.83.129",
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+}
 ROOT_URLCONF = 'api_service.urls'
 
 TEMPLATES = [

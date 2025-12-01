@@ -2,8 +2,7 @@ import './index.css';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-// const API_URL = 'http://176.113.83.129:8000/';
-const API_URL = 'http://127.0.0.1:8000/';
+const API_URL = 'http://176.113.83.129:8000/';
 
 
 function App() { 
