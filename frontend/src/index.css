@@ -3,24 +3,23 @@
   src: url('./RemoraCorp-W1Medium.otf') format('opentype');
 }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    height: 100%;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 
 body {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
-  background-image: url('/public/bg4.png');
+  background-image: url('/public/bg_pk.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family:Arial
+  font-family:Arial;
 }
 
 .header{
@@ -51,7 +50,7 @@ body {
   margin-right: 1vh;
   background: transparent;
   border: none;
-  font-size: 2em;
+  font-size: 5vh;
   cursor: pointer;
   color:#fff;
 }
@@ -70,13 +69,13 @@ body {
   margin-top:15%;
 }
 
-.menu a {
-  color: #fff;
+.nav-link {
   padding: 1vh 0;
+  color:#fff;
   text-decoration: none;
 }
 
-.menu a:hover {
+.nav-link:hover {
   color: gray;
   border: none;
   border-bottom: 1px solid gray; 
@@ -204,19 +203,16 @@ hr {
 }
 
 .button {
-  margin-top:15%;
-  /* margin-right: 40%; */
-  width: 226.25px;
+  margin-top:10%;
+  width: 225px;
   height: 43.75px;
   position: relative;
-  display: inline-block;
 }
 
 .button img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .overlay-text {
@@ -245,17 +241,17 @@ hr {
   color: transparent;
 }
 
-.big_text{
+.big-text{
   font-weight: bold;
   font-size: 4.7vw;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1366px) {
+  html, body {
+    height: 100%;
+  }
   body{
-    background-image: url('/public/bg_mobile3.png');
-    padding-bottom: 0;
-    padding-left: 0;
-
+    background-image: url('/public/bg_mobile.png');
   }
   .menu {
     flex-direction: column;
@@ -297,15 +293,8 @@ hr {
     font-size:5vw;
     margin-bottom:10%;
   }
-  .big_text{
+  .big-text{
     font-size: 10vw;
-  }
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 100%;
   }
 
 }

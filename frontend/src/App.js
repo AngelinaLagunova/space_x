@@ -1,5 +1,6 @@
 import './index.css';
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 const API_URL = 'http://localhost:8000/';
 
@@ -8,13 +9,14 @@ function App() {
 
   const [nav, setNav] = useState([]);
   const [advantages, setAdvantages] = useState([]);
-
   const [isOpen, setIsOpen] = useState(false);
 
+  // Свертка меню
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
   };
 
+  // Получение данных из API
   useEffect(() => {
     fetch(API_URL + "api/menu/")
       .then(response => response.json())
@@ -33,10 +35,12 @@ function App() {
       .catch(error => console.error(error));
   }, []);
 
+  // Заполнение меню элементами из БД
   const navGeneration = nav.map((item, index) =>
-    <a href={item.url} key={index}>{item.name}</a>
+    <Link className="nav-link" to={item.url} key={index}>{item.name}</Link>
   );
 
+  // Заполнение преимуществ элементами из БД
   const advantagesGeneration = advantages.map((item, index) =>
       <div className={"advantagesItem" + index} key={index}>
         <div className="advantagesText">{item.text_above}</div>
@@ -57,12 +61,12 @@ function App() {
     <div className='main'>
       <div className="button-container">
         <div className='text'>
-          <span className='big_text'>ПУТЕШЕСТВИЕ</span><br/>
+          <span className='big-text'>ПУТЕШЕСТВИЕ</span><br/>
           на красную планету
         </div>
         <div className="button">
-            <img src="button2.png" alt="Кнопка"/>
-            <a href="/#" className="overlay-text">Начать путешествие</a>
+            <img src="button.png" alt="Кнопка"/>
+            <Link to="/#" className="overlay-text">Начать путешествие</Link>
         </div>
       </div>
       <div className="advantagesBlock">{advantagesGeneration}</div>
