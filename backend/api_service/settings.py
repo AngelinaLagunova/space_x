@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    # "https://domen.ru",
+    "http://176.113.83.129",
 ]
 
 ROOT_URLCONF = 'api_service.urls'
